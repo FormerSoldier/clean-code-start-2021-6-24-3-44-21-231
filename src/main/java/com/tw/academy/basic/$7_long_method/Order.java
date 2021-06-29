@@ -24,4 +24,20 @@ public class Order {
     public List<LineItem> getLineItems() {
         return lineItems;
     }
+
+    double calculateAllTotalAmount() {
+        double allTotalAmount = 0d;
+        for (LineItem lineItem : getLineItems()) {
+            allTotalAmount += lineItem.totalAmount() + lineItem.totalAmount() * .10;
+        }
+        return allTotalAmount;
+    }
+
+    double calculateTotSalesTax() {
+        double totSalesTax = 0d;
+        for (LineItem lineItem : getLineItems()) {
+            totSalesTax += lineItem.totalAmount() * .10;
+        }
+        return totSalesTax;
+    }
 }

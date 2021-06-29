@@ -19,3 +19,6 @@ there are many function logic in the printReceipt
 - extract calculate allTotalAmount to a method calculateAllTotalAmount
 - extract get lineitem to a method
 
+**5. Feature Envy**
+- extract totSalesTax and allTotalAmount to Order class
+- extract lineitem to LineItem class

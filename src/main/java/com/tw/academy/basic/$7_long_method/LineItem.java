@@ -27,4 +27,11 @@ public class LineItem {
     double totalAmount() {
         return price * quantity;
     }
+
+    String getLineItemInfo() {
+        return getDescription() + OrderReceipt.TAB_CHARACTER +
+                        getPrice() + OrderReceipt.TAB_CHARACTER +
+                        getQuantity() + OrderReceipt.TAB_CHARACTER +
+                        totalAmount() + '\n';
+    }
 }
