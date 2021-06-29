@@ -8,3 +8,7 @@
 - Order o，rename to order
 - tot rename to allTotalAmount
 - totSalesTx rename to totSalesTax
+
+**3. Magic Number**
+- extract .10 to TEN_PERCENT
+- extract \t to TAB_CHARACTER
