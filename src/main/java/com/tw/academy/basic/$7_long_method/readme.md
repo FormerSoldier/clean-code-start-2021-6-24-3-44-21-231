@@ -17,3 +17,5 @@
 there are many function logic in the printReceipt
 - extract calculate totSalesTax to a method calculateTotSalesTax
 - extract calculate allTotalAmount to a method calculateAllTotalAmount
+- extract get lineitem to a method
+
