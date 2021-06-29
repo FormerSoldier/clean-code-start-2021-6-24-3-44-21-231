@@ -12,3 +12,7 @@
 **3. Magic Number**
 - extract .10 to TEN_PERCENT
 - extract \t to TAB_CHARACTER
+
+**4. Long Method**
+there are many function logic in the printReceipt
+- extract calculate totSalesTax to a method
