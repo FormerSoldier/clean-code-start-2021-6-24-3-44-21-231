@@ -1,6 +1,7 @@
 package com.tw.academy.basic.$7_long_method;
 
 public class LineItem {
+	public static final char TAB_CHARACTER = '\t';
 	private String description;
 	private double price;
 	private int quantity;
@@ -29,9 +30,9 @@ public class LineItem {
     }
 
     String getLineItemInfo() {
-        return getDescription() + OrderReceipt.TAB_CHARACTER +
-                        getPrice() + OrderReceipt.TAB_CHARACTER +
-                        getQuantity() + OrderReceipt.TAB_CHARACTER +
+        return getDescription() + TAB_CHARACTER +
+                        getPrice() + TAB_CHARACTER +
+                        getQuantity() + TAB_CHARACTER +
                         totalAmount() + '\n';
     }
 }
