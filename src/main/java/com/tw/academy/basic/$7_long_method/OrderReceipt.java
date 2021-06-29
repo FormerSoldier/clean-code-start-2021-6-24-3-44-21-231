@@ -8,10 +8,10 @@ package com.tw.academy.basic.$7_long_method;
  * @since   2018-1-1
  */
 public class OrderReceipt {
-    private Order o;
+    private Order order;
 
-    public OrderReceipt(Order o) {
-        this.o = o;
+    public OrderReceipt(Order order) {
+        this.order = order;
     }
 
     //todo: rename -- Tom
@@ -22,13 +22,13 @@ public class OrderReceipt {
         output.append("======Printing Orders======\n");
 
         // print date, bill no, customer name
-        output.append(o.getCustomerName());
-        output.append(o.getCustomerAddress());
+        output.append(order.getCustomerName());
+        output.append(order.getCustomerAddress());
 
         // prints lineItems
-        double totSalesTx = 0d;
-        double tot = 0d;
-        for (LineItem lineItem : o.getLineItems()) {
+        double totSalesTax = 0d;
+        double allTotalAmount = 0d;
+        for (LineItem lineItem : order.getLineItems()) {
             output.append(lineItem.getDescription());
             output.append('\t');
             output.append(lineItem.getPrice());
@@ -40,17 +40,17 @@ public class OrderReceipt {
 
             // calculate sales tax @ rate of 10%
             double salesTax = lineItem.totalAmount() * .10;
-            totSalesTx += salesTax;
+            totSalesTax += salesTax;
 
             // calculate total amount of lineItem = price * quantity + 10 % sales tax
-            tot += lineItem.totalAmount() + salesTax;
+            allTotalAmount += lineItem.totalAmount() + salesTax;
         }
 
         // prints the state tax
-        output.append("Sales Tax").append('\t').append(totSalesTx);
+        output.append("Sales Tax").append('\t').append(totSalesTax);
 
         // print total amount
-        output.append("Total Amount").append('\t').append(tot);
+        output.append("Total Amount").append('\t').append(allTotalAmount);
         return output.toString();
     }
 }

@@ -3,3 +3,8 @@
 - function printCustomerName and comment Deprecated
 - comment  output.append("Date - " + order.getDate()
 - output.append(order.getCustomerLoyaltyNumber())
+
+**2. Mysterious naming**
+- Order o，rename to order
+- tot rename to allTotalAmount
+- totSalesTx rename to totSalesTax
