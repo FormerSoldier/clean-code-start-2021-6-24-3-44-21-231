@@ -15,4 +15,5 @@
 
 **4. Long Method**
 there are many function logic in the printReceipt
-- extract calculate totSalesTax to a method
+- extract calculate totSalesTax to a method calculateTotSalesTax
+- extract calculate allTotalAmount to a method calculateAllTotalAmount
